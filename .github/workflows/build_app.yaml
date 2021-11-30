@@ -8,7 +8,7 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v2
       - name: Build debug
-        run: ./gradlew assembleDebug
+        run: ./gradlew build
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
