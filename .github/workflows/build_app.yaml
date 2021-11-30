@@ -8,11 +8,11 @@ jobs:
       - name: Clone Repository
         uses: actions/checkout@v2
       - name: Build debug
-        run: ./gradlew build
+        run: ./gradlew assembleDebug
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
           name: app
           path: |
-            ./app/build/outputs/apk/debug/app.apk
+            ./app/build/outputs/apk/debug/*.apk
             ./app/build/outputs/apk/debug/output-metadata.json
