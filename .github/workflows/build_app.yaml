@@ -14,5 +14,7 @@ jobs:
         with:
           name: app
           path: |
-            ./app/build/outputs/apk/debug/*.apk
-            ./app/build/outputs/apk/debug/output-metadata.json
+            ./app/build/outputs/
+            ./app/build/outputs/
+          if-no-files-found:
+            run: apt install tree -y && tree
