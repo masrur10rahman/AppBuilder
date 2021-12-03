@@ -16,5 +16,3 @@ jobs:
           path: |
             ./app/build/outputs/
             ./app/build/outputs/
-          if-no-files-found:
-            run: apt install tree -y && tree
