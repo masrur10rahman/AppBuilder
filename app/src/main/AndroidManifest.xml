@@ -1,25 +1,24 @@
-<manifest
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.show.text">
-	<application
-		android:allowBackup="true"
-		android:label="Show text"
-		android:icon="@drawable/app_icon"
-		android:largeHeap="true"
-		android:theme="@style/AppTheme">
-		<activity
-			android:name=".MainActivity"
-			android:configChanges="orientation|screenSize"
-			android:windowSoftInputMode="stateVisible">
-			<intent-filter>
-				<action android:name="android.intent.action.MAIN"/>
-				<category android:name="android.intent.category.LAUNCHER"/>
-			</intent-filter>
-		</activity>
-		<activity
-			android:name=".DisplayMessageActivity"
-			android:configChanges="orientation|screenSize"
-			android:theme="@style/AppTheme.FullScreen"
-			android:windowSoftInputMode="stateHidden"/>
-	</application>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="imgui.example.android">
+
+    <application
+        android:label="ImGuiExample"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:hasCode="true">
+
+        <activity
+            android:name="imgui.example.android.MainActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <meta-data android:name="android.app.lib_name"
+                android:value="ImGuiExample" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 </manifest>
